@@ -1,6 +1,7 @@
 package minecraftbyexample.mbe05_block_smartblockmodel2;
 
 import net.minecraft.block.state.IBlockState;
+import net.minecraft.client.Minecraft;
 import net.minecraft.client.renderer.block.model.BakedQuad;
 import net.minecraft.client.renderer.block.model.ItemCameraTransforms;
 import net.minecraft.client.renderer.texture.TextureAtlasSprite;
@@ -24,6 +25,9 @@ import java.util.List;
  *   (eg the up model connects the core to the top face of the block)
  * An IBakedModel is just a list of quads; the composite model is created by concatenating the quads from the relevant
  *   subcomponents.
+ *
+ *   BEWARE! Rendering is multithreaded so your ISmartBlockModel must be thread-safe, preferably immutable.
+
  */
 public class CompositeModel implements IFlexibleBakedModel, ISmartBlockModel {
 
@@ -63,9 +67,13 @@ public class CompositeModel implements IFlexibleBakedModel, ISmartBlockModel {
     return false;
   }
 
+  // used for block breaking shards
   @Override
-  public TextureAtlasSprite getTexture() {
-    return modelCore.getTexture();
+  public TextureAtlasSprite getParticleTexture() {
+    TextureAtlasSprite textureAtlasSprite = Minecraft.getMinecraft().getTextureMapBlocks()
+                                                     .getAtlasSprite("minecraftbyexample:blocks/mbe05_block_3d_web");
+
+    return textureAtlasSprite;
   }
 
   @Override
@@ -222,8 +230,8 @@ public class CompositeModel implements IFlexibleBakedModel, ISmartBlockModel {
     }
 
     @Override
-    public TextureAtlasSprite getTexture() {
-      return modelCore.getTexture();
+    public TextureAtlasSprite getParticleTexture() {
+      return modelCore.getParticleTexture();
     }
 
     @Override

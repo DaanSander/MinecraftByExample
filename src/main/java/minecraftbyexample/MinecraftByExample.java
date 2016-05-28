@@ -58,8 +58,12 @@ import net.minecraftforge.fml.common.event.FMLPreInitializationEvent;
      guiFactory= MinecraftByExample.GUIFACTORY)  //delete guiFactory if MBE70 not present and you don't have a configuration GUI
 public class MinecraftByExample
 {
-    public static final String MODID = "minecraftbyexample";
-    public static final String VERSION = "1.0";
+  // you also need to update the modid and version in two other places as well:
+  //  build.gradle file (the version, group, and archivesBaseName parameters)
+  //  resources/mcmod.info (the name, description, and version parameters)
+   public static final String MODID = "minecraftbyexample";
+    public static final String VERSION = "1.8.9a";
+
     public static final String GUIFACTORY = "minecraftbyexample.mbe70_configuration.MBEGuiFactory"; //delete if MBE70 not present
 
     // The instance of your mod that Forge uses.  Optional.

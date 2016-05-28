@@ -1,5 +1,5 @@
-MinecraftByExample
-==================
+MinecraftByExample [1.8.9]
+==========================
 
 The purpose of MinecraftByExample is to give simple working examples of the important concepts in Minecraft and Forge.
 If you're anything like me, a good code example is worth several screens' worth of waffling explanation, and can very
@@ -14,8 +14,12 @@ to more than one example are the MinecraftByExample, CommonProxy, ClientOnlyProx
 
 If you want more information and explanatory text about the concepts, the following links might be useful
 Guide to how Minecraft works-  http://greyminecraftcoder.blogspot.com.au/p/list-of-topics.html
+The Official Forge documentation- http://mcforge.readthedocs.org/en/latest/
 Forge Modding articles- http://www.wuppy29.com/minecraft/modding-tutorials/forge-modding-1-8
 Forge Tutorials listing- http://www.minecraftforge.net/forum/index.php/board,120.0.html
+
+For earlier versions, see the relevant GitHub branch
+  1.8: https://github.com/TheGreyGhost/MinecraftByExample/tree/1-8final
 
 List of examples
 Blocks
@@ -58,6 +62,9 @@ Network
 Configuration GUI
   MBE70 - configuration file linked to the "mod options" button GUI on the mods list screen
 
+Testing tools
+  MBE75 - a tool to help you automate testing of your classes in-game.
+
 How to use this example project-
 A) You can browse directly in GitHub, or alternatively download it as a zip and browse it locally.
 
@@ -74,9 +81,6 @@ B) If you want to install it and compile it, the basic steps for beginners are:
        choose yes you can run the gradle build task from inside IntelliJ.  For most users, there's no other difference.
     c) If you imported the gradle project, you should run the gradle task 'getIntellijRuns' afterwards to get the Run and Debug
        configurations.
-    d) Note!  If you are copying the code to your own project, don't forget to add this line to the end of your build.gradle
-       file, otherwise your assets won't work (see http://www.minecraftforge.net/forum/index.php/topic,21354.0.html):
-       sourceSets { main { output.resourcesDir = output.classesDir } }
 
 5) If using Eclipse:
     a) Open the project

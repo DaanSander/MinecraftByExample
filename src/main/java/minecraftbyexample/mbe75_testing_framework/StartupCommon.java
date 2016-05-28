@@ -1,4 +1,4 @@
-package minecraftbyexample.mbe14_item_camera_transforms;
+package minecraftbyexample.mbe75_testing_framework;
 
 import net.minecraftforge.fml.common.registry.GameRegistry;
 
@@ -17,13 +17,13 @@ import net.minecraftforge.fml.common.registry.GameRegistry;
  */
 public class StartupCommon
 {
-  public static ItemCamera itemCamera;  // this holds the unique instance of your block
+  public static ItemTestRunner itemTestRunner;  // this holds the unique instance of your block
 
   public static void preInitCommon()
   {
     // each instance of your item should have a name that is unique within your mod.  use lower case.
-    itemCamera = (ItemCamera)(new ItemCamera().setUnlocalizedName("mbe14_item_camera"));
-    GameRegistry.registerItem(itemCamera, "mbe14_item_camera");
+    itemTestRunner = (ItemTestRunner)(new ItemTestRunner().setUnlocalizedName("mbe75_test_runner"));
+    GameRegistry.registerItem(itemTestRunner, "mbe75_test_runner");
   }
 
   public static void initCommon()

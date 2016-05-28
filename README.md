@@ -1,4 +1,4 @@
-MinecraftByExample
+MinecraftByExample [1.8.9]
 ==================
 
 The purpose of MinecraftByExample is to give simple working examples of the important concepts in Minecraft and Forge. If you're anything like me, a good code example is worth several screens worth of waffling explanation, and can very quickly explain the key concepts.  I also find it much easier to adapt and debug something that already works, than to have to synthesize something from scratch and spend hours trying to discover the missing bit of information I didn't know about.
@@ -12,7 +12,11 @@ If you want more information and explanatory text about the concepts, the follow
 
   - [Guide to how Minecraft works][greyminecraftcoder]
   - [Forge Modding articles][wuppy]
+  - [The Official Forge documentation][forgedocs]
   - [Forge Tutorials listing][tutorials_forum]
+
+####For earlier versions, see the relevant GitHub branch:
+ - MBE for Forge 1.8: [1-8final][version1-8]
 
 ##List of examples
 ### Blocks
@@ -49,12 +53,14 @@ If you want more information and explanatory text about the concepts, the follow
 ### EntityFX - particle effects
   - [MBE50][50] - shows how to use vanilla EntityFX; also how to generate your own custom EntityFX
 
-
 ### Network
   - [MBE60][60] - send network messages between client and server
 
 ### Configuration GUI
   - [MBE70][70] - configuration file linked to the "mod options" button GUI on the mods list screen
+
+### Testing tools
+  - [MBE75][75] - a tool to help you automate testing of your classes in-game.
 
 ## Usage
   - You can browse directly in GitHub, or alternatively, download it as a zip and browse it locally.
@@ -71,9 +77,6 @@ If you want more information and explanatory text about the concepts, the follow
            choose yes you can run the gradle build task from inside IntelliJ.  For most users, there's no other difference.
         3. If you imported the gradle project, you should run the gradle task 'getIntellijRuns' afterwards to get the Run and Debug
            configurations.
-        4. Note- if you are copying the code to your own project, don't forget to add this line to the end of your build.gradle
-           file, otherwise your assets won't work (see [here][IntellijFix]):<br>
-           sourceSets { main { output.resourcesDir = output.classesDir } }
     6. If using Eclipse:
         1. Open the Project.
         2. Right click on the project, select "Run As" > "Run Configurations..."
@@ -87,6 +90,7 @@ Check out [this video][forge_installation] for more help installing Forge.
 
 [main_classes]: https://github.com/TheGreyGhost/MinecraftByExample/tree/master/src/main/java/minecraftbyexample
 [greyminecraftcoder]: http://greyminecraftcoder.blogspot.com.au/p/list-of-topics.html
+[forgedocs]:http://mcforge.readthedocs.org/en/latest/
 [wuppy]: http://www.wuppy29.com/minecraft/modding-tutorials/forge-modding-1-8
 [tutorials_forum]: http://www.minecraftforge.net/forum/index.php/board,120.0.html
 
@@ -120,12 +124,16 @@ Check out [this video][forge_installation] for more help installing Forge.
 
 [70]: https://github.com/TheGreyGhost/MinecraftByExample/tree/master/src/main/java/minecraftbyexample/mbe70_configuration
 
+[75]: https://github.com/TheGreyGhost/MinecraftByExample/tree/master/src/main/java/minecraftbyexample/mbe75_testing_framework
+
 [more_help]: http://www.minecraftforge.net/forum/index.php?topic=21354.msg108332#msg108332
 [forge_installation]: http://youtu.be/8VEdtQLuLO0
 [alternate_idea]: #alternate-setup-for-intellij-idea
 [gradle_tool_window]: https://www.jetbrains.com/idea/help/gradle-tool-window.html
 [diesieben_idea]: http://www.minecraftforge.net/forum/index.php/topic,21354.0.html
 [IntellijFix]:http://www.minecraftforge.net/forum/index.php/topic,21354.0.html
+
+[version1-8]: https://github.com/TheGreyGhost/MinecraftByExample/tree/1-8final
 
 With thanks to these helpful folks:
 Brandon3035,
